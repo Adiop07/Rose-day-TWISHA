@@ -20,7 +20,7 @@ btn.addEventListener("click", () => {
   music.volume = 1;
   music.play();
 });
-const emojis = ["🌸", "🌹", "💗", "✨", "🫶"];
+const emojis = [ "💩"];
 
 function createFalling() {
   const fall = document.createElement("div");
@@ -87,3 +87,4 @@ hugModal.addEventListener("click", () => {
 
   }
 });
+
