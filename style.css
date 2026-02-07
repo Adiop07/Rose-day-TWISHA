@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.hero {
+  margin-top: 7vh;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 0 0 20px #ff007f;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff; }
+  to { text-shadow: 0 0 40px #ff007f; }
+}
+
+.gallery {
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #ff4d94;
+  transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+button {
+  background-color: #ff007f;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4d94;
+  transform: scale(1.1);
+}
+
+#falling-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.fall {
+  position: absolute;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+.love-box {
+  position: relative;
+  max-width: 80%;
+  margin: 100px auto;
+  padding: 30px 35px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+#loveText {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #b11226;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+  z-index: 1000;
+  position: relative;
+}
+
+.gallery img {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* MODAL */
+#imageModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+#imageModal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}.transition {
+  text-align: center;
+  margin: 80px auto 30px;
+  z-index: 1000;
+  position: relative;
+}
+
+.transition-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #8b0000;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  font-style: italic;
+}
+
+.down-arrow {
+  font-size: 28px;
+  margin-top: 15px;
+  animation: bounce 1.5s infinite;
+  opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+.hug-button {
+  display: block;
+  margin: 30px auto 60px;
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  border-radius: 30px;
+  background: #fff;
+  color: #b11226;
+  border: 2px solid #b11226;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hug-button:hover {
+  background: #b11226;
+  color: #fff;
+}
+
+/* MODAL */
+.hug-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 4000;
+}
+
+.hug-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 320px;
+  animation: hugFade 0.6s ease;
+}
+
+.hug-content img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.hug-text {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+@keyframes hugFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
